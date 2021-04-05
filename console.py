@@ -9,6 +9,8 @@ import repositories.gym_class_repository as gym_class_repository
 import repositories.session_repository as session_repository
 
 member_repository.delete_all()
+gym_class_repository.delete_all()
+session_repository.delete_all()
 
 member1 = Member("Martin Sutherland", 31)
 member_repository.save(member1)
