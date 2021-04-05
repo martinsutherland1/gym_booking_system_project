@@ -42,9 +42,9 @@ def edit(id):
 def update(id):
     name = request.form["name"]
     age = request.form["age"]
-    member = Member(name, age)
+    member = Member(name, age, id)
     member_repository.update(member)
-    return redirect("/members/{id}")
+    return redirect(f"/members")
 
    
 

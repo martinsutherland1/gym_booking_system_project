@@ -4,14 +4,21 @@
 
 
     <h1>Members</h1>
-    <ul><li><a href="/members/new_member">Add New Member</a></li></ul>
+    <nav>
+        <ul><li><a href="/members/new_member">Add New Member</a></li></ul>
+    </nav>
     <table>
         <tr>
             <th>Name</th>
+            <th>Age</th>
+            <th>Membership Type</th>
+            
         </tr>
         {% for member in members %}
         <tr>
             <td><a href="/members/{{member.id}}"> {{member.name}}</a></td>
+            <td>{{member.age}}</td>
+            <td></td>
         </tr>
             
         {% endfor %}

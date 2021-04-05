@@ -2,10 +2,33 @@
 
 {% block content  %}
 
+
+
+
 <h1> {{gym_class.name}}</h1>
+<p>Date: {{gym_class.date}}</p>
+<p>Time: {{gym_class.time}}</p>
+<p>Capacity: {{gym_class.capacity}}</p>
 
 
+  <p>
+    <form action="/gym_classes/{{ gym_class.id }}/delete" method="POST">
+      <input class="btn btn--danger" type="submit" value="Delete" />
+    </form>
+  </p>
 
+  
+
+  <p>
+      <form action="/gym_classes/{{ gym_class.id }}/edit">
+        <input class="btn bt--danger" type="submit" value="Edit"/>
+  </p>
+
+  
+
+
+  
+  
 
 
 

@@ -2,7 +2,11 @@
 
 {% block content %}
     <h1>Classes</h1>
-
+    <nav>
+        <ul>
+          <li><a href="gym_classes/create_class">Create Class</a></li>
+        </ul>
+      </nav>
     <table>
         <tr>
             <th>Name</th>
@@ -13,12 +17,12 @@
         </tr>
         {% for gym_class in gym_classes %}
         <tr>
-            <td><a href="/gym_classes/{{gym_class.id}}"> </a>{{gym_class.name}}</td>
+            <td><a href="/gym_classes/{{gym_class.id}}"> {{gym_class.name}}</a></td>
             <td>{{gym_class.date}}</td>
             <td>{{gym_class.time}}</td>
             <td>{{gym_class.capacity}}</td>
             <td></td>
-            <td><a href="/gym_classes/{{gym_class.id}}">Edit</a></td>
+            
 
 
         </tr>
