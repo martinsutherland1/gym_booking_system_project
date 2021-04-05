@@ -24,7 +24,7 @@ def new_session():
    member_id = request.form['member_id']
    gym_class_id = request.form['gym_class_id']
    member = member_repository.select(member_id)
-   gym_class = gym_class_repository(gym_class_id)
+   gym_class = gym_class_repository.select(gym_class_id)
    session = Session(member, gym_class)
    session_repository.save(session)
    return redirect('/sessions')
