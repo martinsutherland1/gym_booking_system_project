@@ -22,10 +22,10 @@ gym_class_repository.save(gym_class1)
 gym_class2 = Gym_Class("Dance", "03/04", "09.30", 10)
 gym_class_repository.save(gym_class2)
 
-session1 = Session(member1, gym_class1)
-session_repository.save(session1)
-session2 = Session(member2, gym_class2)
-session_repository.save(session2)
+# session1 = Session(member1, gym_class1)
+# session_repository.save(session1)
+# session2 = Session(member2, gym_class2)
+# session_repository.save(session2)
 
 
 

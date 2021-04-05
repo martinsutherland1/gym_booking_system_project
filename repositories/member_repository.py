@@ -28,12 +28,17 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        member = Member(result['name'], result['id'])
+        member = Member(result['name'], result['age'], result['id'])
     return member
 
 def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
+
+def delete(id):
+    sql = "DELETE FROM members WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
 
 def get_by_class(gym_class):
     sql = "SELECT members.* FROM members INNER JOIN sessions ON member.id = session.member_id WHERE sessions.gym_class_id = %s"
@@ -47,4 +52,9 @@ def get_by_class(gym_class):
         members.append(member)
     
     return members
+
+def update(member):
+    sql = "UPDATE members SET (name, age) = (%s, %s) WHERE id = %s"
+    values = [member.name, member.age, member.id]
+    run_sql(sql, values)
 

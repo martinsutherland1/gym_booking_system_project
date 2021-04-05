@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content  %}
+
+<h1> {{member.name}}</h1>
+
+
+
+    
+    
+    
+    
+      <p>
+        <form action="/members/{{ member.id }}/delete" method="POST">
+          <input class="btn btn--danger" type="submit" value="Delete" />
+        </form>
+      </p>
+
+      <p>
+          <form action="/members/{{ member.id }}/edit">
+            <input class="btn bt--danger" type="submit" value="Edit"/>
+      </p>
+    
+    
+  
+
+<h3>Classes Booked:</h3>
+
+
+
+    
+{% endblock  %}
+    

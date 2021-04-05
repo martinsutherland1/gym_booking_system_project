@@ -18,8 +18,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        member = member_repository.select(row['member_id'])
-        gym_class = Gym_Class(row['name'], member, row['date'], row['time'], row['capacity'], row['id'])
+        
+        gym_class = Gym_Class(row['name'], row['date'], row['time'], row['capacity'], row['id'])
         gym_classes.append(gym_class)
     return gym_classes
 
