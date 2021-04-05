@@ -24,7 +24,16 @@
         <input class="btn bt--danger" type="submit" value="Edit"/>
   </p>
 
-  
+  <h3>
+    Class List:
+  </h3>
+  <ol>
+    {% for member in members %}
+
+    <li>{{member.name}}</li>
+      
+    {% endfor %}
+  </ol>
 
 
   

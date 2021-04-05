@@ -40,8 +40,10 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+
+
 def get_by_class(gym_class):
-    sql = "SELECT members.* FROM members INNER JOIN sessions ON member.id = session.member_id WHERE sessions.gym_class_id = %s"
+    sql = "SELECT members.* FROM members INNER JOIN sessions ON members.id = sessions.member_id WHERE sessions.gym_class_id = %s"
     values = [gym_class.id]
     results = run_sql(sql, values)
 
