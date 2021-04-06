@@ -13,6 +13,7 @@ member_repository.delete_all()
 gym_class_repository.delete_all()
 
 
+member1 = Member("Ted Mosby", 27)
 
 
 

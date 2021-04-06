@@ -24,13 +24,34 @@ def new_session():
    member_id = request.form['member_id']
    gym_class_id = request.form['gym_class_id']
    member = member_repository.select(member_id)
+   
    gym_class = gym_class_repository.select(gym_class_id)
    session = Session(member, gym_class)
-   session_repository.save(session)
-   return redirect('/sessions')
+   current_capacity = gym_class_repository.check_class_capacity(gym_class.id)
+   if current_capacity == gym_class.capacity:
+        return render_template("sessions/full.html")
+   else:
+        
+        session_repository.save(session)
+        return redirect('/sessions')
 
 
+@sessions_blueprint.route("/gym_classes/remove")
+def remove():
+    gym_classes = gym_class_repository.select_all()
+    members = member_repository.select_all()
+    return render_template("gym_classes/remove.html", members=members, gym_classes=gym_classes)
 
+@sessions_blueprint.route("/gym_classes/remove", methods=['POST'])
+def remove_member_from_class():
+   member_id = request.form['member_id']
+   gym_class_id = request.form['gym_class_id']
+   member = member_repository.select(member_id)
+   gym_class = gym_class_repository.select(gym_class_id)
+   session_repository.delete_by_member(member.id, gym_class.id)
+   return redirect ('/gym_classes')
+
+   
 
 
 

@@ -62,4 +62,17 @@ def get_by_member(member):
 
     return gym_classes
     
-    
+def check_class_capacity(id):
+    sql = "SELECT count(*) FROM sessions WHERE gym_class_id = %s"
+    values = [id]
+    results = run_sql(sql, values)
+
+    counts = []
+
+    for row in results:
+        count = row['count']
+
+
+    return count
+
+

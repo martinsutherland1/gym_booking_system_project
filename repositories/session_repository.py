@@ -32,3 +32,8 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
+def delete_by_member(member_id, gym_class_id):
+    sql = "DELETE FROM sessions WHERE sessions.member_id = %s AND sessions.gym_class_id = %s"
+    values = [member_id, gym_class_id]
+    run_sql(sql, values)
+    

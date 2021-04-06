@@ -1,3 +1,5 @@
+
+
 class Gym_Class:
    def __init__(self, name, date, time, capacity, id = None):
        self.name = name
@@ -7,5 +9,5 @@ class Gym_Class:
        self.id = id
 
 
-
+    
 

@@ -16,6 +16,9 @@ class TestGym_class(unittest.TestCase):
     
     def test_gym_class_has_capacity(self):
         self.assertEqual(10, self.gym_class.capacity)
+    
+    
+
 
     
 
