@@ -56,7 +56,7 @@ def update(id):
     capacity = request.form["capacity"]
     gym_class = Gym_Class(name, date, time, capacity, id)
     gym_class_repository.update(gym_class)
-    return redirect(f"/gym_classes")
+    return redirect("/gym_classes")
 
 
 

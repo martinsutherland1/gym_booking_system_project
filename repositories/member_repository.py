@@ -58,5 +58,12 @@ def get_by_class(gym_class):
 def update(member):
     sql = "UPDATE members SET (name, age) = (%s, %s) WHERE id = %s"
     values = [member.name, member.age, member.id]
-    run_sql(sql, values)
+    results = run_sql(sql, values)
+
+    return True
+
+    # for row in results:
+    #     member = Member(row["name"], row["age"], row["id"])
+    #     members.append(member)
+    # return members
 

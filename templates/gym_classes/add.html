@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="/sessions" method="post">
+<form action="/gym_classes/add" method="post">
   <label for="member">Select Member:</label>
     <select name="member_id" id="member">
       {% for member in members %}

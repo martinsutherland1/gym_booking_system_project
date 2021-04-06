@@ -67,11 +67,8 @@ def check_class_capacity(id):
     values = [id]
     results = run_sql(sql, values)
 
-    counts = []
-
     for row in results:
         count = row['count']
-
 
     return count
 
