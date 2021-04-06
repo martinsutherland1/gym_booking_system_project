@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.member import Member
+from models.gym_class import Gym_Class
+from models.session import Session
 import repositories.member_repository as member_repository
+import repositories.gym_class_repository as gym_class_repository
+import repositories.session_repository as session_repository
 
 members_blueprint = Blueprint("members", __name__)
 
@@ -13,7 +17,9 @@ def members():
 @members_blueprint.route("/members/<id>")
 def show(id):
     member = member_repository.select(id)
-    return render_template("members/show.html", member=member)
+    gym_classes = gym_class_repository.get_by_member(member)
+
+    return render_template("members/show.html", gym_classes=gym_classes, member=member)
 
 @members_blueprint.route("/members/new_member", methods=['GET'])
 def new():

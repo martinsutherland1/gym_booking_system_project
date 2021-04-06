@@ -49,3 +49,17 @@ def update(gym_class):
     run_sql(sql, values)
     
 
+def get_by_member(member):
+    sql = "SELECT gym_classes.* FROM gym_classes INNER JOIN sessions ON gym_classes.id = sessions.gym_class_id WHERE sessions.member_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    gym_classes = []
+
+    for row in results:
+        gym_class = Gym_Class(row['name'], row['date'], row['time'], row['capacity'])
+        gym_classes.append(gym_class)
+
+    return gym_classes
+    
+    

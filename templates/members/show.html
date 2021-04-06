@@ -19,15 +19,26 @@
       <p>
           <form action="/members/{{ member.id }}/edit">
             <input class="btn bt--danger" type="submit" value="Edit"/>
+          </form>
       </p>
     
-    
-  
-
 <h3>Classes Booked:</h3>
 
-
-
+<table>
+<tr>
+  <th>Name</th>
+  <th>Date</th>
+  <th>Time</th>
+</tr>
+{% for gym_class in gym_classes %}
+<tr>
+  <td>{{gym_class.name}}</td>
+  <td>{{gym_class.date}}</td>
+  <td>{{gym_class.time}}</td>
+</tr>
+{% endfor %}
+</table>
+  
     
 {% endblock  %}
     

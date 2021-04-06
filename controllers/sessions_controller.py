@@ -10,7 +10,7 @@ import repositories.gym_class_repository as gym_class_repository
 import repositories.member_repository as member_repository
 
 
-sessions_blueprint = Blueprint("sessions", __name__)
+sessions_blueprint = Blueprint("sessions/add", __name__)
 
 @sessions_blueprint.route("/sessions", methods=['GET'])
 def sessions():
