@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Classes</h1>
-    <nav>
+    <h1 id="classes-head">Classes</h1>
+    <nav id="classes-changes">
         <ul>
           <li><a href="gym_classes/create_class">Create Class</a></li>
           <li><a href="/gym_classes/add">Add Member to Class</a></li>
           <li><a href="/gym_classes/remove">Remove Member from Class</a></li>
         </ul>
       </nav>
-    <table>
+    <table id="classes">
         <tr>
             <th>Name</th>
             <th>Date</th>

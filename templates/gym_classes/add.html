@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<form action="/gym_classes/add" method="post">
+<form id="add_to_class" action="/gym_classes/add" method="post">
   <label for="member">Select Member:</label>
     <select name="member_id" id="member">
       {% for member in members %}
@@ -18,7 +18,7 @@
   
 
   
-  <input class="btn btn--action" type='submit' value="Add">
+  <input id="submit" type='submit' value="Add">
 </form>
 
 

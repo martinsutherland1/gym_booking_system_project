@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url("background.jpeg");
+    background-color: #cccccc;
+  }
+
+body > main > header {
+    color: white;
+    font-size: larger;
+}
+
+body > main > h1 {
+    color: white;
+    padding-left: 5px;
+}
+
+  img {
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    
+  }
+
+  nav > ul > li {
+    list-style: none;
+    
+}
+
+#main-nav > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    
+  }
+  
+  #main-nav > ul > li {
+    position: center;
+    float: left;
+    
+  }
+  
+  #main-nav > ul > li a {
+    
+    display: block;
+    color: deepskyblue;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  #welcome {
+      display: block;
+      text-align: center;
+      
+      color: deepskyblue;
+  }
+
+  #member, #gym_class {
+    
+    
+    padding: 5px;
+    
+  }
+
+  #member-title {
+      color: white;
+      margin-left: 30px;
+      padding: 5px;
+  }
+
+   #classes-head {
+    color: white;
+    padding: 5px;
+    margin-left: 30px;
+}
+
+
+
+  #members {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    background-color: black;
+  }
+
+  #members td, #members th {
+    border: 1px solid #ddd;
+    padding: 4px;
+    color: deepskyblue;
+  }
+  
+ 
+  
+  #members th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #333;
+    color: white;
+  }
+
+  #members a {
+      color: deepskyblue;
+      text-decoration: none;
+  }
+
+  #classes {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    background-color: black;
+  }
+
+  #classes td, #classes th {
+    border: 1px solid #ddd;
+    padding: 4px;
+    color: deepskyblue;
+  }
+  
+ 
+  
+  #classes th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #333;
+    color: white;
+  }
+
+  #classes a {
+      color: deepskyblue;
+      text-decoration: none;
+  }
+
+  #new_member > ul > li > a{
+     
+      background-color: #333;
+      border: 1px solid #ddd;
+      color: deepskyblue;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+  }
+
+ #classes-changes > ul > li > a{
+    background-color: #333;
+    border: 1px solid #ddd;
+    color: deepskyblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+ }
+
+  input {
+    width: 25%;
+    padding: 12px 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    
+  }
+
+  label {
+      color: white;
+      border: 1px solid #ddd;
+      background-color: black;
+  }
+
+  button {
+    background-color: #333; 
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 50px;
+  }
+
+  #submit {
+    background-color: #333;
+    border: 1px solid #ddd;
+    color: deepskyblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+  }
+
+ 

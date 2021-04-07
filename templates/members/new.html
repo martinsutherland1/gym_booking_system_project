@@ -2,13 +2,13 @@
 
 {% block content %}
 
-<form action="/members" method="post">
+<form id="member-dets" action="/members" method="post">
     <div>
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="name" required autofocus>
     </div>
     <div>
-        <label for="age">Age:</label>
+        <label for="age">_Age:</label>
         <input type="number" id="age" name="age" placeholder="age" required>
     </div>
     <button type="submit">Add Member</button>
