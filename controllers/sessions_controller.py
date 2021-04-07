@@ -29,7 +29,7 @@ def new_session():
    current_capacity = gym_class_repository.check_class_capacity(gym_class.id)
    duplicate = session_repository.check_member_in_class(member.id, gym_class.id)
    
-   if member.membership_type == 7 and gym_class.class_type == "Premier":
+   if member.membership_type == 1 and gym_class.class_type == "Premier":
         return render_template("gym_classes/membership.html")
    if  duplicate > 0:
        return render_template("gym_classes/duplicate.html")

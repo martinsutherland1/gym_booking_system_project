@@ -1,5 +1,7 @@
 DROP TABLE IF EXISTS sessions;
+
 DROP TABLE IF EXISTS members;
+DROP TABLE IF EXISTS membership_types;
 DROP TABLE IF EXISTS gym_classes;
 
 
