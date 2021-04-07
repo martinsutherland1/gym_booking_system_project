@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    
+<h1> <label>{{membership_type.name}}</label></h1>
+    
+      
+        <form action="/membership_types/{{ membership_type.id }}/delete" method="POST">
+          <input  id="btn-delete" type="submit" value="Delete" />
+        </form>
+      
+
+      
+          <form action="/membership_types/{{ membership_type.id }}/edit">
+            <input id="btn-edit" type="submit" value="Edit">
+          </form>
+      
+
+{% endblock  %}
+

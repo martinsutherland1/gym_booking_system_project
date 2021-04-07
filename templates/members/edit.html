@@ -10,6 +10,14 @@
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" placeholder="age" value="{{member.age}}" required>
     </div>
+    <div>
+        <label for="membership">Membership:</label>
+        <select name="membership_id" id="membership_id">
+            {% for membership_type in membership_types %}
+            <option value="{{ membership_type.id }}">{{ membership_type.name }}</option>
+            {% endfor %}
+          </select>
+    </div>
     <button type="submit">Update Member</button>
 
 </form>

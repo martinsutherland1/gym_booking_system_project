@@ -3,9 +3,11 @@ from flask import Blueprint
 from models.member import Member
 from models.gym_class import Gym_Class
 from models.session import Session
+from models.membership_type import Membership_type
 import repositories.member_repository as member_repository
 import repositories.gym_class_repository as gym_class_repository
 import repositories.session_repository as session_repository
+import repositories.membership_type_repository as membership_type_repository
 
 members_blueprint = Blueprint("members", __name__)
 
@@ -24,13 +26,17 @@ def show(id):
 @members_blueprint.route("/members/new_member", methods=['GET'])
 def new():
     members = member_repository.select_all()
-    return render_template("members/new.html", members=members)
+    membership_types = membership_type_repository.select_all()
+    return render_template("members/new.html", members=members, membership_types=membership_types)
 
 @members_blueprint.route("/members", methods=['POST'])
 def create():
     name = request.form["name"]
     age = request.form["age"]
-    member = Member(name, age)
+    membership_id = request.form["membership_id"]
+
+    membership_type = membership_type_repository.select(membership_id)
+    member = Member(name, age, membership_type)
     member_repository.save(member)
     return redirect("/members")
 
@@ -42,13 +48,17 @@ def delete(id):
 @members_blueprint.route("/members/<id>/edit")
 def edit(id):
     member = member_repository.select(id)
-    return render_template("members/edit.html", member=member)
+    membership_types = membership_type_repository.select_all()
+    return render_template("members/edit.html", member=member, membership_types=membership_types)
 
 @members_blueprint.route("/members/<id>", methods=['POST'])
 def update(id):
     name = request.form["name"]
     age = request.form["age"]
-    member = Member(name, age, id)
+    membership_id = request.form["membership_id"]
+
+    membership_type = membership_type_repository.select(membership_id)
+    member = Member(name, age, membership_type, id)
     member_repository.update(member)
     return redirect(f"/members")
 

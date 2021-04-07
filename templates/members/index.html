@@ -8,6 +8,8 @@
     
     <nav id="new_member">
         <ul><li><a href="/members/new_member">Add New Member</a></li></ul>
+        
+
     </nav>
     <table id="members">
         <tr>
@@ -20,7 +22,7 @@
         <tr>
             <td><a href="/members/{{member.id}}"> {{member.name}}</a></td>
             <td>{{member.age}}</td>
-            <td></td>
+            <td>{{member.membership_type}}</td>
         </tr>
             
         {% endfor %}

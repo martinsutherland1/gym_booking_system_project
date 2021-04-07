@@ -7,13 +7,15 @@ from models.gym_class import Gym_Class
 import repositories.member_repository as member_repository
 import repositories.gym_class_repository as gym_class_repository
 import repositories.session_repository as session_repository
+import repositories.membership_type_repository as membership_type_repository
 
 session_repository.delete_all()
+membership_type_repository.delete_all()
 member_repository.delete_all()
 gym_class_repository.delete_all()
 
 
-member1 = Member("Ted Mosby", 27)
+
 
 
 

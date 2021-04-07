@@ -3,38 +3,57 @@
 {% block content  %}
 
 
+<table id="class_list">
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Capacity</th>
+    <th>Class Type</th>
+  </tr>
+  <tr>
+    <td>{{gym_class.name}}</td>
+    <td>{{gym_class.date}}</td>
+    <td>{{gym_class.time}}</td>
+    <td>{{gym_class.capacity}}</td>
+    <td>{{gym_class.class_type}}</td>
+  </tr>
+</table>
 
 
-<h1> {{gym_class.name}}</h1>
-<p>Date: {{gym_class.date}}</p>
-<p>Time: {{gym_class.time}}</p>
-<p>Capacity: {{gym_class.capacity}}</p>
 
 
-  <p>
+  
     <form action="/gym_classes/{{ gym_class.id }}/delete" method="POST">
-      <input class="btn btn--danger" type="submit" value="Delete" />
+      <input  id="btn-delete" type="submit" value="Delete" />
     </form>
-  </p>
+  
 
   
 
-  <p>
+  
       <form action="/gym_classes/{{ gym_class.id }}/edit">
-        <input class="btn bt--danger" type="submit" value="Edit"/>
+        <input id="btn-edit" type="submit" value="Edit"/>
       </form>
-  </p>
+  
 
-  <h3>
-    Class List:
-  </h3>
-  <ol>
+  <h3><label>Class List:</label></h3>
+
+  <table id="members_on_class">
+    <tr><th>Name</th></tr>
     {% for member in members %}
-
-    <li>{{member.name}}</li>
-      
+    <tr>
+      <td>{{member.name}}</td>
+    </tr>
     {% endfor %}
-  </ol>
+  </table>
+  
+    
+
+   
+      
+    
+ 
 
 
   

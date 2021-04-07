@@ -15,7 +15,8 @@
             <th>Date</th>
             <th>Time</th>
             <th>Capacity</th>
-            <th>Full</th>
+            <th>Membership Category</th>
+            <!-- <th>Availability</th> -->
         </tr>
         {% for gym_class in gym_classes %}
         <tr>
@@ -23,7 +24,13 @@
             <td>{{gym_class.date}}</td>
             <td>{{gym_class.time}}</td>
             <td>{{gym_class.capacity}}</td>
-            <td></td>
+            <td>{{gym_class.class_type}}</td>
+            <!-- {% if gym_class.capacity == current_capacity %}
+            <td>Full</td>
+            {% else %}
+            <td>Space</td>
+            {% endif %} -->
+            
             
 
 
