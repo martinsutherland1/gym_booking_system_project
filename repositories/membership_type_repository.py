@@ -43,3 +43,5 @@ def update(membership_type):
     sql = "UPDATE membership_types SET (name) = (%s) WHERE id = %s"
     values = [membership_type.name, membership_type.id]
     run_sql(sql, values)
+
+
