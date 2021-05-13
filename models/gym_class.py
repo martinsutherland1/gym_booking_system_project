@@ -7,8 +7,10 @@ class Gym_Class:
        self.time = time
        self.capacity = capacity
        self.class_type = class_type
+    
        self.id = id
 
+  
 
     
 

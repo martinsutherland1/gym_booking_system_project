@@ -1,403 +1,125 @@
 body {
-    margin: 0;
-    font-family: 'Josefin Sans', sans-serif;
-    background-image: url("background.jpeg");
-    background-color: #cccccc;
-  }
-
-body > main > header {
-    color: white;
-    font-size: larger;
+    background-color: white;
 }
 
-body > main > h1 {
-    color: white;
-    padding-left: 5px;
-}
-
-  img {
-    /* display: block;
-    margin-left: auto;
-    margin-right: auto; */
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-    width: 150px;
-    
-  }
-
-  nav > ul > li {
+#main-nav {
+    display: flex;
+    flex-direction: row;
     list-style: none;
+    justify-content: space-evenly;
+    background-color: #333;
+}
+
+#save-class button {
+    
+    background-color: #333;
+    color: deepskyblue;
+}
+
+
+
+#new-class {
+    padding-top:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #333
+  
+}
+
+
+
+#main-nav a {
+    text-decoration: none;
+    color: deepskyblue;
+}
+
+#welcome {
+    text-align: center;
+   /* padding-left: 200px;
+   padding-top: 50px; */
+}
+
+h1 {
+    text-align: center;
+}
+
+#classes-changes {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+    
+
+}
+
+
+
+#classes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    gap: 1rem;
     
 }
 
-#main-nav > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    
-  }
-  
-  #main-nav > ul > li {
-    position: center;
-    float: left;
-    
-  }
-  
-  #main-nav > ul > li a {
-    
-    display: block;
-    color: deepskyblue;
-    text-align: right;
-    padding: 14px 16px;
+#class-head-name {
+    text-align: center;
+
+}
+
+#class-head-name a {
     text-decoration: none;
-  }
+    color: deepskyblue;
 
-  #welcome {
-      padding: 10px;
-      text-align: center;
-      color: deepskyblue;
-      border: 1px solid #ddd;
-      background-color: #333;
-      
-      
-      
-  }
+}
 
-  #member, #gym_class {
-    
-    
-    padding: 5px;
-    
-  }
-
-  #member-title {
-      color: white;
-      margin-left: 30px;
-      padding: 5px;
-  }
-
-   #classes-head {
+#class-display {
+   list-style: none;
+    border: solid 2px deepskyblue;
+    background-color: #333;
+    height: 200px;
+    width: 200px;
     color: white;
-    padding: 5px;
-    margin-left: 30px;
-}
-
-
-
-  #members {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 75%;
-    background-color: black;
-  }
-
-  #members td, #members th {
-    border: 1px solid #ddd;
-    padding: 4px;
-    color: deepskyblue;
-  }
-  
- 
-  
-  #members th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #333;
-    color: white;
-  }
-
-  #members a {
-      color: deepskyblue;
-      text-decoration: none;
-  }
-
-  #classes {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 75%;
-    background-color: black;
-  }
-
-  #classes td, #classes th {
-    border: 1px solid #ddd;
-    padding: 4px;
-    color: deepskyblue;
-  }
-  
- 
-  
-  #classes th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #333;
-    color: white;
-  }
-
-  #classes a {
-      color: deepskyblue;
-      text-decoration: none;
-  }
-
-  #new_member > ul > li > a{
-     
-      background-color: #333;
-      border: 1px solid #ddd;
-      color: deepskyblue;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 12px;
-  }
-
- #classes-changes > ul > li > a{
-    background-color: #333;
-    border: 1px solid #ddd;
-    color: deepskyblue;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
- }
-
-  input {
-    width: 25%;
-    padding: 12px 10px;
-    margin: 8px 0;
-    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    flex: 0 1 calc(20% - 20px);
     
-  }
+    
+}
 
-  label {
-      color: deepskyblue;
-      border: 1px solid #ddd;
-      background-color: #333;
-  }
-
-  button {
-    background-color: #333; 
-    border: 1px solid #ddd;;
-    color: deepskyblue;
-    padding: 10px 24px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-left: 50px;
-  }
-
-  #submit {
+#create {
+    border: solid 1px deepskyblue;
     background-color: #333;
-    border: 1px solid #ddd;
-    color: deepskyblue;
-    padding: 15px 32px;
-    text-align: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    }
+
+#create  a {
     text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-  }
-
- #remove {
-  background-color: #333;
-  border: 1px solid #ddd;
-  color: deepskyblue;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
- }
-
- #membership-changes > ul > li > a {
-  background-color: #333;
-  border: 1px solid #ddd;
-  color: deepskyblue;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-}
-
-#membership_types {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 75%;
-  background-color: black;
-}
-
-#membership_types td, #membership_types th {
-  border: 1px solid #ddd;
-  padding: 4px;
-  color: deepskyblue;
-}
-
-
-
-#membership_types th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #333;
-  color: white;
-}
-
-#membership_types a {
     color: deepskyblue;
+}
+
+#add {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+    padding-left: 4px;
+    padding-right: 4px;
+    }
+
+#add  a {
     text-decoration: none;
-}
-
-#membership-head {
-  color: white;
-  padding: 5px;
-  margin-left: 30px;
-}
-
-#class_list {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 75%;
-  background-color: lightgray;
-}
-
-#class_list td, #class_list th {
-  border: 1px solid #ddd;
-  padding: 4px;
-  color: black;
-}
-
-
-
-#class_list th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #333;
-  color: white;
-}
-
-#class_list a {
     color: deepskyblue;
+}
+#remove {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+    padding-left: 4px;
+    padding-right: 4px;
+    }
+
+#remove  a {
     text-decoration: none;
-}
-
-#members_list {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 75%;
-  background-color: #333;
-}
-
-#members_list td, #members_list th {
-  border: 1px solid #ddd;
-  padding: 4px;
-  color: deepskyblue;
-}
-
-
-
-#members_list th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #333;
-  color: white;
-}
-
-#members_list a {
     color: deepskyblue;
-    text-decoration: none;
 }
-
-#members_list {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 75%;
-  background-color: black;
-}
-
-#members-headers {
-  color: deepskyblue;
-      border: 1px solid #ddd;
-      background-color: #333;
-}
-
-#members_on_class {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 75%;
-  background-color: #333;
-}
-
-#members_on_class td, #members_on_class th {
-  border: 1px solid #ddd;
-  padding: 4px;
-  color: deepskyblue;
-}
-
-
-
-#members_on_class th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #333;
-  color: white;
-}
-
-#members_on_class a {
-    color: deepskyblue;
-    text-decoration: none;
-}
-
-#members_on_class {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 20%;
-  background-color: black;
-}
-
-p {
-      padding: 10px;
-      text-align: center;
-      color: red;
-      border: 1px solid #ddd;
-      background-color: #333;
-      font-size: larger;
-}
-
-#return-classes > a {
-  background-color: #333;
-    border: 1px solid #ddd;
-    color: deepskyblue;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    /* display: inline-block; */
-    font-size: 14px;
-    margin-left: 600px;
-
-}
-
-#btn-edit, #btn-delete {
-  background-color: #333;
-  border: 1px solid #ddd;;
-  color: deepskyblue;
-  padding: 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  width: 10%;
-  margin-left: 10px;
-
-}
- 

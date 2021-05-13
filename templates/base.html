@@ -12,19 +12,24 @@
 </head>
 
 <body>
-    <main>
-        <header><img src="static/css/logo.png" alt="logo" /></header>
+    <main id="main-container">
+        <!-- <header><a href="/"><img src="/static/css/logo.png" alt="logo" /></header></a> -->
+            
         <h1>FitFriends</h1>
         <nav id="main-nav">
-            <ul>
-                <li><a href="/">Home</a></li>
+            
+                <div><li><a href="/">Home</a></li></div>
+                <div><li><a href="/gym_classes">Class Schedule</a></li></div>
+                <div><li><a href="/members">Members</a></li></div>
+                <div><li><a href="/membership_types">Membership Types</a></li></div>
                 
                 
                 
-                <li><a href="/gym_classes">Class Schedule</a></li>
-                <li><a href="/members">Members</a></li>
-                <li><a href="/membership_types">Membership Types</a></li>
-            </ul>
+                
+                
+                
+                
+            
         </nav>
         <section>
             {% block content %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 id="classes-head">Classes</h1>
+    <nav id="classes-changes">
+        
+          <li id="create"><a href="gym_classes/create_class">Create</a></li>
+          <li id="add"><a href="/gym_classes/add">Add Member</a></li>
+          <li id="remove"><a href="/gym_classes/remove">Remove Member</a></li>
+        
+      </nav>
+      <br>
+      <table id="class_list">
+        <tr>
+          <th>Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Capacity</th>
+          <th>Class Type</th>
+          <th>Booked</th>
+        </tr>
+        <tr>
+          <td>{{gym_class.name}}</td>
+          <td>{{gym_class.date}}</td>
+          <td>{{gym_class.time}}</td>
+          <td>{{gym_class.capacity}}</td>
+          <td>{{gym_class.class_type}}</td>
+          {% if class_capacity == gym_class.capacity %}
+          <td>Full</td>
+          {% else %}
+          <td>{{class_capacity}}</td>
+          {% endif %}
+          
+        </tr>
+      </table>
+       
+        
+        
+{% endblock %}

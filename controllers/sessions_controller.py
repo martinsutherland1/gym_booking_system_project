@@ -26,18 +26,26 @@ def new_session():
    member = member_repository.select(member_id)
    gym_class = gym_class_repository.select(gym_class_id)
    session = Session(member, gym_class)
-   current_capacity = gym_class_repository.check_class_capacity(gym_class.id)
+   class_capacity = gym_class_repository.check_class_capacity(gym_class.id)
+
    duplicate = session_repository.check_member_in_class(member.id, gym_class.id)
    
    if member.membership_type == 1 and gym_class.class_type == "Premier":
         return render_template("gym_classes/membership.html")
    if  duplicate > 0:
        return render_template("gym_classes/duplicate.html")
-   if current_capacity == gym_class.capacity:
+   if class_capacity == gym_class.capacity:
         return render_template("gym_classes/full.html")
    else:
         session_repository.save(session)
         return redirect('/gym_classes')
+        
+# Request member and gym class id from the form
+# Create a member using the member class
+# Select a class from the gym class list using sql
+# create a session using the member id and class id
+# before adding check the capacity, check for duplicate entries and if their membership is sufficeint for the class
+# save them to the sessions table using sql commands
         
 @sessions_blueprint.route("/gym_classes/remove")
 def remove():

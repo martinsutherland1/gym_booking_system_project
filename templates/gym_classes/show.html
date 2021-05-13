@@ -10,6 +10,7 @@
     <th>Time</th>
     <th>Capacity</th>
     <th>Class Type</th>
+    <th>Booked</th>
   </tr>
   <tr>
     <td>{{gym_class.name}}</td>
@@ -17,24 +18,32 @@
     <td>{{gym_class.time}}</td>
     <td>{{gym_class.capacity}}</td>
     <td>{{gym_class.class_type}}</td>
+    {% if class_capacity == gym_class.capacity %}
+    <td>Full</td>
+    {% else %}
+    <td>{{class_capacity}}</td>
+    {% endif %}
+    
   </tr>
 </table>
 
 
 
+<div id="flex-box">
+  <form action="/gym_classes/{{ gym_class.id }}/delete" method="POST">
+    <input  id="btn-delete" type="submit" value="Delete" />
+  </form>
 
-  
-    <form action="/gym_classes/{{ gym_class.id }}/delete" method="POST">
-      <input  id="btn-delete" type="submit" value="Delete" />
+
+
+
+
+    <form action="/gym_classes/{{ gym_class.id }}/edit">
+      <input id="btn-edit" type="submit" value="Edit"/>
     </form>
+</div>
   
-
-  
-
-  
-      <form action="/gym_classes/{{ gym_class.id }}/edit">
-        <input id="btn-edit" type="submit" value="Edit"/>
-      </form>
+   
   
 
   <h3><label>Class List:</label></h3>

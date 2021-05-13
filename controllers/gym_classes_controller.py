@@ -15,14 +15,16 @@ gym_classes_blueprint = Blueprint("gym_classes", __name__)
 def gym_classes():
     gym_classes = gym_class_repository.select_all()
     
+    
+    
     return render_template("gym_classes/index.html", gym_classes=gym_classes)
 
 @gym_classes_blueprint.route("/gym_classes/<id>")
 def show(id):
     gym_class = gym_class_repository.select(id)
-    
+    class_capacity = gym_class_repository.check_class_capacity(gym_class.id)
     members = member_repository.get_by_class(gym_class)
-    return render_template("gym_classes/show.html", gym_class=gym_class, members=members)
+    return render_template("gym_classes/show_new.html", gym_class=gym_class, members=members, class_capacity=class_capacity)
 
 @gym_classes_blueprint.route("/gym_classes/create_class", methods=["GET"])
 def new():
@@ -36,6 +38,7 @@ def create():
     time = request.form["time"]
     capacity = request.form["capacity"]
     class_type = request.form["class_type"]
+    
     gym_class = Gym_Class(name, date, time, capacity, class_type)
     gym_class_repository.save(gym_class)
     return redirect("/gym_classes")

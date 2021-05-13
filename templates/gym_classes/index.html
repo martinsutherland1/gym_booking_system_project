@@ -3,39 +3,34 @@
 {% block content %}
     <h1 id="classes-head">Classes</h1>
     <nav id="classes-changes">
-        <ul>
-          <li><a href="gym_classes/create_class">Create Class</a></li>
-          <li><a href="/gym_classes/add">Add Member to Class</a></li>
-          <li><a href="/gym_classes/remove">Remove Member from Class</a></li>
-        </ul>
+        
+          <li id="create"><a href="gym_classes/create_class">Create</a></li>
+          <li id="add"><a href="/gym_classes/add">Add Member</a></li>
+          <li id="remove"><a href="/gym_classes/remove">Remove Member</a></li>
+        
       </nav>
-    <table id="classes">
-        <tr>
-            <th>Name</th>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Capacity</th>
-            <th>Membership Category</th>
-            <!-- <th>Availability</th> -->
-        </tr>
+      <br>
+    <div id="classes">
         {% for gym_class in gym_classes %}
-        <tr>
-            <td><a href="/gym_classes/{{gym_class.id}}"> {{gym_class.name}}</a></td>
-            <td>{{gym_class.date}}</td>
-            <td>{{gym_class.time}}</td>
-            <td>{{gym_class.capacity}}</td>
-            <td>{{gym_class.class_type}}</td>
-            <!-- {% if gym_class.capacity == current_capacity %}
-            <td>Full</td>
+        <div id=class-display>
+            <h4 id="class-head-name"> <a href="/gym_classes/{{gym_class.id}}"> {{gym_class.name}}</a></h4>
+            <li>Date: {{gym_class.date}}</li> 
+            <li>Time: {{gym_class.time}}</li> 
+            <li>Max Capacity: {{gym_class.capacity}}</li>
+            <li>Membership: {{gym_class.class_type}}</li>
+            {% if class_capacity == gym_class.capacity %}
+              <li>Full</li>
             {% else %}
-            <td>Space</td>
-            {% endif %} -->
-            
-            
-
-
-        </tr>
-            
-        {% endfor %}
-    </table>
+              <li>Capacity: {{class_capacity}}</li>
+            {% endif %}
+        </div>
+      
+      {% endfor %}
+        
+        
+        
+    </div>
+       
+        
+        
 {% endblock %}
