@@ -1,5 +1,21 @@
 body {
-    background-color: white;
+    background-image: url("background.jpeg");
+}
+
+#header-title {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+    color: deepskyblue;
+}
+
+#members_on_class {
+    padding-left: 600px;
+
+}
+
+#members-in-class-list {
+    text-align: left;
+
 }
 
 #main-nav {
@@ -8,6 +24,7 @@ body {
     list-style: none;
     justify-content: space-evenly;
     background-color: #333;
+    border: solid 1px deepskyblue;
 }
 
 #save-class button {
@@ -23,9 +40,77 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    color: #333
+    color: deepskyblue;
   
 }
+#name_label {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+}
+#data_label {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+}
+#time_label {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+}
+#capacity_label {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+}
+
+#class_type_label {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+}
+
+#show-class {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+    color: deepskyblue;
+}
+
+#add_to_class_show {
+    padding-top:20px;
+    padding-left: 400px;
+    padding-right: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: deepskyblue;
+}
+
+#add_to_class_show > button {
+    background-color: #333;
+    color: deepskyblue;
+    height: 20px;
+    width: 80px;
+}
+
+#remove_class_show {
+    padding-top:20px;
+    padding-left: 400px;
+    padding-right: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: deepskyblue;
+}
+
+#remove_class_show button {
+    background-color: #333;
+    color: deepskyblue;
+    height: 20px;
+    width: 80px;
+}
+
+#class-details {
+    display: flex;
+    flex-direction: row;
+}
+
+
 
 
 
@@ -55,6 +140,20 @@ h1 {
 
 
 
+#classes-head {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+    color: deepskyblue;
+    height: 30px;
+    width: 100px;
+    
+
+   
+   
+}
+
+
+
 #classes {
     display: flex;
     flex-direction: row;
@@ -72,6 +171,9 @@ h1 {
 #class-head-name a {
     text-decoration: none;
     color: deepskyblue;
+    border: solid 1px deepskyblue;
+    padding-left: 6px;
+    padding-right: 6px;
 
 }
 
@@ -87,6 +189,40 @@ h1 {
     flex: 0 1 calc(20% - 20px);
     
     
+}
+
+#show-class-dets {
+    list-style: none;
+    text-align: center;
+    padding-left: 400px;
+    
+}
+
+#show-class-buttons {
+    display: flex;
+    flex-direction: row;
+    padding-left: 160px;
+    
+
+}
+
+#delete-class-btn{
+    padding-right: 20px;
+    
+}
+
+#btn-delete{
+   width: 60px;
+    background-color: #333;
+    color: deepskyblue;
+}
+
+
+
+#btn-edit {
+    width: 60px;
+    background-color: #333;
+    color: deepskyblue;
 }
 
 #create {

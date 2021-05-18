@@ -1,61 +1,110 @@
 {% extends 'base.html' %}
 
 {% block content  %}
-
-
-<table id="class_list">
-  <tr>
-    <th>Name</th>
-    <th>Date</th>
-    <th>Time</th>
-    <th>Capacity</th>
-    <th>Class Type</th>
-    <th>Booked</th>
-  </tr>
-  <tr>
-    <td>{{gym_class.name}}</td>
-    <td>{{gym_class.date}}</td>
-    <td>{{gym_class.time}}</td>
-    <td>{{gym_class.capacity}}</td>
-    <td>{{gym_class.class_type}}</td>
-    {% if class_capacity == gym_class.capacity %}
-    <td>Full</td>
-    {% else %}
-    <td>{{class_capacity}}</td>
-    {% endif %}
+<div id="show-class">
+<div id="class-details">
+  
     
-  </tr>
-</table>
-
-
-
-<div id="flex-box">
-  <form action="/gym_classes/{{ gym_class.id }}/delete" method="POST">
-    <input  id="btn-delete" type="submit" value="Delete" />
-  </form>
-
-
-
-
-
+    <div id="show-class-dets">
+      <h4>{{gym_class.name}}</h4>
+      <p>Date: {{gym_class.date}} | Time: {{gym_class.time}} | Max Capacity: {{gym_class.capacity}} | Membership: {{gym_class.class_type}}</p> 
+     
+      {% if class_capacity == gym_class.capacity %}
+          <li>Full</li>
+      {% else %}
+           <li>Booked: {{class_capacity}}</li>
+      {% endif %}
+      <p></p>
+<div id="show-class-buttons">
+  <div id="delete-class-btn">
+    <form action="/gym_classes/{{ gym_class.id }}/delete" method="POST">
+      <input  id="btn-delete" type="submit" value="Delete" />
+    </form>
+  </div>
+  <div id="edit-class-btn">
     <form action="/gym_classes/{{ gym_class.id }}/edit">
       <input id="btn-edit" type="submit" value="Edit"/>
     </form>
+  </div>
+  
+
 </div>
+     
+    </div>
+     
+      
+    
+  
+  
+  
   
    
+</div>
   
+  <form id="add_to_class_show" action="/gym_classes/add" method="post">
+    <label for="member">Select Member:</label>
+      <select name="member_id" id="member">
+        <option></option>
+        {% for member in members_all %}
+        
+        <option value="{{ member.id }}">{{ member.name }}</option>
+        {% endfor %}
+      </select>
+    
+    <label for="gym_class">Select a Class</label>
+      <select name="gym_class_id" id="gym_class">
+        <option value="{{ gym_class.id }}">{{ gym_class.name }}</option>
+        </select>
+    
+  
+    
+    <button id="btn-edit" type='submit' value="Add">Add</button>
+  </form>
+  
+  <form id="remove_class_show"action="/gym_classes/remove" method="post">
+    <label for="member">Select Member:</label>
+      <select name="member_id" id="member">
+        <option></option>
+        {% for member in members %}
+        <option value="{{ member.id }}">{{ member.name }}</option>
+        {% endfor %}
+      </select>
+    
+    <label for="gym_class">Select a Class</label>
+      <select name="gym_class_id" id="gym_class">
+        
+        <option value="{{ gym_class.id }}">{{ gym_class.name }}</option>
+        
+      </select>
+    
+  
+    
+    <button id="btn-edit" type='submit' value="Remove">Remove</button>
+  </form>
+  
+ 
+  
+    
+     
+    
+  
+    
+  
+    <div id="members_on_class">
+      <h3><label>Class List</label></h3>
+      <div id="members-in-class-list">
+        {% for member in members %}
+      
+          <p>{{member.name}}</p>
+        
+        {% endfor %}
+      
+      </div>
+      
+      
+    </div>
+</div>
 
-  <h3><label>Class List:</label></h3>
-
-  <table id="members_on_class">
-    <tr><th>Name</th></tr>
-    {% for member in members %}
-    <tr>
-      <td>{{member.name}}</td>
-    </tr>
-    {% endfor %}
-  </table>
   
     
 
