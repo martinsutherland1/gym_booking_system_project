@@ -20,6 +20,7 @@ def members():
 def show(id):
     member = member_repository.select(id)
     gym_classes = gym_class_repository.get_by_member(member)
+    
 
     return render_template("members/show.html", gym_classes=gym_classes, member=member)
 

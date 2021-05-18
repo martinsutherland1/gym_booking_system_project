@@ -4,14 +4,18 @@
 <form id="add_to_class" action="/gym_classes/add" method="post">
   <label for="member">Select Member:</label>
     <select name="member_id" id="member">
+      <option></option>
       {% for member in members %}
+      
       <option value="{{ member.id }}">{{ member.name }}</option>
       {% endfor %}
     </select>
   
   <label for="gym_class">Select a Class</label>
     <select name="gym_class_id" id="gym_class">
+      <option></option>
       {% for gym_class in gym_classes %}
+      
       <option value="{{ gym_class.id }}">{{ gym_class.name }}</option>
       {% endfor %}
     </select>

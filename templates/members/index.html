@@ -22,9 +22,14 @@
         <tr>
             <td><a href="/members/{{member.id}}"> {{member.name}}</a></td>
             <td>{{member.age}}</td>
-            <td>{{member.membership_type}}</td>
+            {% if member.membership_type == 15 %}
+            <td>Standard</td>
+            {% else %}
+            <td>Premier</td>
+            {% endif %}
         </tr>
             
         {% endfor %}
     </table>
 {% endblock %}
+

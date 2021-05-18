@@ -38,10 +38,6 @@ def delete_by_member(member_id, gym_class_id):
     run_sql(sql, values)
     
 def check_member_in_class(member_id, gym_class_id):
-    # sql = "SELECT * FROM sessions WHERE sessions.member_id = %s AND sessions.gym_class_id = %s"
-    # values = [member_id, gym_class_id]
-    # run_sql(sql, values)
-
     sql = "SELECT count(*) FROM sessions WHERE sessions.member_id = %s AND sessions.gym_class_id = %s"
     values = [member_id, gym_class_id]
     results = run_sql(sql, values)

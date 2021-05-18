@@ -2,29 +2,37 @@
 
 {% block content %}
 
-<form action="/gym_classes" method="post">
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="name" required autofocus>
-    </div>
-    <div>
-        <label for="date">Date:</label>
-        <input type="text" id="date" name="date" placeholder="date" required>
-    </div>
-    <div>
-        <label for="time">Time:</label>
-        <input type="text" id="time" name="time" placeholder="time" required>
-    </div>
-    <div>
-        <label for="capacity">Capacity:</label>
-        <input type="text" id="capacity" name="capacity" placeholder="capacity" required>
-    </div>
-    <div>
-        <label for="class_type">Class Type:</label>
-        <input type="text" id="class_type" name="class_type" placeholder="class_type" required>
-    </div>
-    <button type="submit">Add Class</button>
 
-</form>
+    <form  id="new-class" action="/gym_classes" method="post">
+        <div>
+            <label id="name_label" for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="" required autofocus>
+        </div>
+        <div>
+            <label id="data_label" for="date">Date</label>
+            <input type="text" id="date" name="date" placeholder="" required>
+        </div>
+        <div>
+            <label id="time_label" for="time">Time</label>
+            <input type="text" id="time" name="time" placeholder="" required>
+        </div>
+        <div>
+            <label id="capacity_label" for="capacity">Capacity</label>
+            <input type="number" id="capacity" name="capacity" placeholder="" required>
+        </div>
+        <div>
+            <label id="class_type_label" for="class_type">Class Type</label>
+            <input type="text" id="class_type" name="class_type" placeholder="" required>
+        </div>
+        
+      <div id="save-class">
+        <button  type="submit">Save</button>
+      </div>
+        
+    
+    </form>
+
+
+
     
 {% endblock  %}
