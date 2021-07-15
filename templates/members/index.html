@@ -2,15 +2,17 @@
 
 {% block content %}
 
-
-    <h1 id="member-title">Members</h1>
+<div id="member-full-div">
 
     
-    <nav id="new_member">
-        <ul><li><a href="/members/new_member">Add New Member</a></li></ul>
+
+    
+    <div id="new-member-btm-div">
+        <h1 id="classes-head">Members</h1>
+        <a id="new-member-btn" href="/members/new_member">Add New Member</a>
         
 
-    </nav>
+    </div>
     <table id="members">
         <tr>
             <th>Name</th>
@@ -20,7 +22,7 @@
         </tr>
         {% for member in members %}
         <tr>
-            <td><a href="/members/{{member.id}}"> {{member.name}}</a></td>
+            <td><a id="new_member" href="/members/{{member.id}}"> {{member.name}}</a></td>
             <td>{{member.age}}</td>
             {% if member.membership_type == 15 %}
             <td>Standard</td>
@@ -31,5 +33,8 @@
             
         {% endfor %}
     </table>
+
+</div>
+   
 {% endblock %}
 

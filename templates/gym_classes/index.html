@@ -22,11 +22,7 @@
             <li>Time: {{gym_class.time}}</li> 
             <li>Max Capacity: {{gym_class.capacity}}</li>
             <li>Membership: {{gym_class.class_type}}</li>
-            {% if class_capacity == gym_class.capacity %}
-              <li>Full</li>
-            {% else %}
-              <li>Capacity: {{class_capacity}}</li>
-            {% endif %}
+                 
         </div>
       
       {% endfor %}

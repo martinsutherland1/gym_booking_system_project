@@ -14,10 +14,10 @@ gym_classes_blueprint = Blueprint("gym_classes", __name__)
 @gym_classes_blueprint.route("/gym_classes")
 def gym_classes():
     gym_classes = gym_class_repository.select_all()
-    
-    
-    
-    return render_template("gym_classes/index.html", gym_classes=gym_classes)
+
+    sessions = session_repository.select_all()
+    total = 0;
+    return render_template("gym_classes/index.html", total=total, gym_classes=gym_classes, sessions=sessions)
 
 @gym_classes_blueprint.route("/gym_classes/<id>")
 def show(id):

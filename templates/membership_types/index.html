@@ -1,14 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 id="membership-head">Membership Types</h1>
-    <nav id="membership-changes">
-        <ul>
-          
-          <li><a href="/membership_types/new_membership">Add Membership Type</a></li>
-          
-        </ul>
-      </nav>
+   <div id="member-full-div">
+    <div id="new-member-btm-div">
+        <h1 id="classes-head2">Membership Types</h1>
+        <a id="new-member-btn" href="/membership_types/new_membership">Add New Membership</a>
+        
+
+    </div>
     <table id="membership_types">
         <tr>
             <th>Name</th>
@@ -17,7 +16,7 @@
         </tr>
         {% for membership_type in membership_types %}
         <tr>
-            <td><a href="/membership_types/{{membership_type.id}}"> {{membership_type.name}}</a></td>
+            <td><a id="member-name" href="/membership_types/{{membership_type.id}}"> {{membership_type.name}}</a></td>
            
             <td>{{membership_type.id}}</td>
             
@@ -27,4 +26,7 @@
             
         {% endfor %}
     </table>
+   </div>
+
+    
 {% endblock %}

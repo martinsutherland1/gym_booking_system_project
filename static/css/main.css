@@ -1,5 +1,8 @@
 body {
     background-image: url("background.jpeg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+   
 }
 
 #header-title {
@@ -88,6 +91,11 @@ body {
     width: 80px;
 }
 
+#add_to_class_box {
+    padding-left: 400px;
+    padding-top: 40px;
+}
+
 #remove_class_show {
     padding-top:20px;
     padding-left: 400px;
@@ -97,6 +105,8 @@ body {
     justify-content: space-around;
     color: deepskyblue;
 }
+
+
 
 #remove_class_show button {
     background-color: #333;
@@ -110,6 +120,25 @@ body {
     flex-direction: row;
 }
 
+#edit-flex {
+    padding-top:20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: deepskyblue;
+}
+
+#save-edit button {
+    
+    background-color: #333;
+    color: deepskyblue;
+}
+
+#edit-label {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+}
+
 
 
 
@@ -120,9 +149,17 @@ body {
 }
 
 #welcome {
+    display: grid;
+    justify-content: center;
     text-align: center;
-   /* padding-left: 200px;
-   padding-top: 50px; */
+    border: solid 1px deepskyblue;
+    padding-left: 100px;
+    background-color: #333;
+    color: deepskyblue;
+    padding-bottom: 200px;
+    align-items: center;
+    padding-top: 20px;
+  
 }
 
 h1 {
@@ -146,10 +183,15 @@ h1 {
     color: deepskyblue;
     height: 30px;
     width: 100px;
-    
+    text-align: center;
+}
 
-   
-   
+#classes-head2 {
+    border: solid 1px deepskyblue;
+    background-color: #333;
+    color: deepskyblue;
+    height: 30px;
+    width: 200px;
 }
 
 
@@ -259,3 +301,71 @@ h1 {
     text-decoration: none;
     color: deepskyblue;
 }
+
+
+table{
+    
+    align-items: center;
+    border-collapse:collapse;
+    border:1px solid deepskyblue;
+    background-color: #333;
+    color: deepskyblue;
+    width: 400px;
+    }
+    
+table td{
+    border:1px solid deepskyblue;
+    }
+
+    #member-name {
+    text-decoration: none;
+    color: deepskyblue;
+    }
+
+    #new_member{
+   list-style: none;
+    background-color: #333;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-decoration: none;
+    color: deepskyblue;
+    }
+
+    #new-member-btn{
+        list-style: none;
+        border: solid 1px deepskyblue;
+        background-color: #333;
+        padding-left: 4px;
+        padding-right: 4px;
+        text-decoration: none;
+        color: deepskyblue;
+        
+    }
+
+    #member-title {
+        color: deepskyblue;
+        border: solid 1px deepskyblue;
+        background-color: #333;
+        
+    }
+
+    #new-member-btm-div {
+        padding-bottom: 10px;
+    }
+
+    #member-full-div {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #member-dets {
+        display: flex;
+        flex-direction: row;
+        color: deepskyblue;
+        justify-content: space-around;
+        padding-top: 20px;
+        
+       
+
+    }

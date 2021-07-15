@@ -4,11 +4,13 @@
 
 <form id="member-dets" action="/membership" method="post">
     <div>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="membership_name" required autofocus>
+        <label id="name_label" for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="" required autofocus>
     </div>
 
-    <button type="submit">Add Membership</button>
+    <div id="save-class">
+        <button type="submit">Save</button>
+    </div>
 
 </form>
     
